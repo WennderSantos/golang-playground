@@ -1,4 +1,4 @@
-package binarysearch
+package main
 
 import "testing"
 
@@ -21,4 +21,3 @@ func TestBinarySearchShouldNotFindTarget(t *testing.T) {
 		t.Errorf("BinarySearch(%q, %q) == %q, but want %q", arr, targetNotInArr, got, notFound)
 	}
 }
-
