@@ -1,8 +1,7 @@
 package main
 
-import (
-	"testing"
-)
+import ("testing"
+				sliceUtil "github.com/wenndersantos/algorithms/sort/sliceutil")
 
 func TestMergeSort(t *testing.T) {
 	unsortedArr := []int{5, 11, 10, 3, 9, 10, 47, 0, 2, 1, 25}
@@ -10,7 +9,7 @@ func TestMergeSort(t *testing.T) {
 
 	got := MergeSort(unsortedArr)
 
-	if !Equal(got, sortedArr) {
+	if !sliceUtil.Equal(got, sortedArr) {
 		t.Errorf("MergeSort(%v) == %v, but expected %v", unsortedArr, got, sortedArr)
 	}
 }

@@ -1,6 +1,7 @@
 package main
 
-import "testing"
+import ("testing"
+				sliceUtil "github.com/wenndersantos/algorithms/sort/sliceutil")
 
 func TestShouldBeAbleToGetTheIndexWithMinimumValueOfAnArray(t *testing.T) {
 	minimumValue := 1
@@ -23,7 +24,7 @@ func TestShouldSwapTwoIndexes(t *testing.T) {
 
 	swap(arr, firstIndex, secondIndex)
 
-	if !Equal (arr, want) {
+	if !sliceUtil.Equal(arr, want) {
 		t.Errorf("swap(%v, %v, %v) == %v, but expected %v", arr, firstIndex, secondIndex, arr, want)
 	}
 
@@ -36,7 +37,7 @@ func TestShouldSortAnSliceUsingSelectionSort(t *testing.T) {
 
 	selectionSort(arr)
 
-	if !Equal (arr, want) {
+	if !sliceUtil.Equal(arr, want) {
 		t.Errorf("selectionSort(%v) == %v, but expected %v", arr, arr, want)
 	}
 

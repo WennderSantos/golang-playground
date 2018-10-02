@@ -1,4 +1,4 @@
-package main
+package sliceutil
 
 func Equal(a, b []int) bool {
 	if len(a) != len(b) {
